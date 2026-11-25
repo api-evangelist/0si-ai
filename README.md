@@ -66,7 +66,7 @@
 
 공시.ai는 한국 DART·KIND와 미국 SEC EDGAR 공시 원문을 AI로 실시간 분석하는 서비스입니다. AI가 원문을 읽고 숫자, 위험 조건, 정정 내역을 한국어로 정리해 제공하며, 관심 종목 알림과 실적 비교 기능을 포함합니다. 무료 플랜으로 체험 가능하고, Pro 플랜에서는 REST API, 웹훅, SSE 스트리밍을 제공해 개발자들이 데이터에 접근할 수 있습니다. 또한 AI 도구와 MCP 커넥터를 통해 에이전트 연동도 지원합니다.
 
-**Areas:** AI · Finance · Filings · Korea · USA
+**Areas:** Artificial Intelligence · Finance · Filings · South Korea · USA
 
 ## 공시.ai on APIs.io
 
@@ -86,20 +86,30 @@ Everything profiled for 공시.ai is published on APIs.io rather than in this re
 
 Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [0si-ai-mcp.yml](https://apis.io/servers/0si-ai/0si-ai-mcp-yml/)
+
 #### Agentic access (1)
 
 Which operations an agent can call, which act, and which need a human in the loop.
 
-- [0Si Ai Agentic Access](https://apis.io/agentic-access/0si-ai/0si-ai-agentic-access/)
+- [공시.ai Agentic Access](https://apis.io/agentic-access/0si-ai/0si-ai-agentic-access/)
 
-#### JSON Schema (6)
+#### JSON Schema (10)
 
 The data models the API reads and writes.
 
+- [CompanyDetail](https://apis.io/schemas/0si-ai/0si-ai-company-detail/)
+- [CompanyList](https://apis.io/schemas/0si-ai/0si-ai-company-list/)
 - [DeltaResponse](https://apis.io/schemas/0si-ai/0si-ai-delta-response/)
 - [DisclosureDetail](https://apis.io/schemas/0si-ai/0si-ai-disclosure-detail/)
+- [FundamentalHistoryList](https://apis.io/schemas/0si-ai/0si-ai-fundamental-history-list/)
 - [MarketReactionResponse](https://apis.io/schemas/0si-ai/0si-ai-market-reaction-response/)
 - [RevisionHistoryResponse](https://apis.io/schemas/0si-ai/0si-ai-revision-history-response/)
+- [StatusResponse](https://apis.io/schemas/0si-ai/0si-ai-status-response/)
 - [UsageResponse](https://apis.io/schemas/0si-ai/0si-ai-usage-response/)
 - [WebhookInput](https://apis.io/schemas/0si-ai/0si-ai-webhook-input/)
 
@@ -119,26 +129,26 @@ Spectral rulesets for the provider's contracts.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [0Si Ai Authentication](https://apis.io/security/0si-ai/0si-ai-authentication/)
-- [0Si Ai Domain Security](https://apis.io/security/0si-ai/0si-ai-domain-security/)
+- [공시.ai Authentication](https://apis.io/security/0si-ai/0si-ai-authentication/)
+- [공시.ai Domain Security](https://apis.io/security/0si-ai/0si-ai-domain-security/)
 
 #### OAuth scopes (1)
 
 The permissions the API asks for.
 
-- [0Si Ai Scopes](https://apis.io/scopes/0si-ai/0si-ai-scopes/)
+- [공시.ai Scopes](https://apis.io/scopes/0si-ai/0si-ai-scopes/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [0Si Ai Plans Pricing](https://apis.io/plans/0si-ai/0si-ai-plans-pricing/)
+- [공시.ai Plans Pricing](https://apis.io/plans/0si-ai/0si-ai-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [0Si Ai Rate Limits](https://apis.io/rate-limits/0si-ai/0si-ai-rate-limits/)
+- [공시.ai Rate Limits](https://apis.io/rate-limits/0si-ai/0si-ai-rate-limits/)
 
 ## Where to find this API
 
@@ -155,33 +165,33 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 62.7** — strong · rubric 0.25.0 · scored 2026-10-31
+**Kin Score 57.4** — strong · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 65.0 |
-| Contract quality | 59.5 |
-| Contract governance | 79.1 |
-| Operational transparency | 28.4 |
+| Discoverability | 71.7 |
+| Contract quality | 62.5 |
+| Contract governance | 35.6 |
+| Operational transparency | 28.6 |
 | Developer ergonomics | 68.3 |
-| Access clarity | 60.0 |
+| Access clarity | 59.6 |
 
-**Agent readiness 55.7** — agent-ready (gated down from agent-native)
+**Agent readiness 55.9** — agent-ready (gated down from agent-native)
 
 | Agent-readiness dimension | Result |
 |---|---|
 | Spec Presence | yes |
-| Agentic Access | unknown |
+| Agentic Access | derived (partial credit) |
 | Reversibility Documented | — |
 | MCP Server | documented (partial credit) |
 | Auth Clarity | served (partial credit) |
 | Idempotency | — |
-| Error Semantics | documented (partial credit) |
+| Error Semantics | verified |
 | OpenAPI Examples | partial |
 | Rate Limit Signal | verified |
 | Event Surface Described | — |
 | Agent Skills | unknown |
-| Well Known Catalog | — |
+| Well Known Catalog | yes |
 | Consent Identity | — |
 | Agent Card | — |
 | Dry Run Mode | — |
@@ -191,8 +201,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | partial |
 | Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 31.8** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 26.4** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/0si-ai/](https://apis.io/providers/0si-ai/).
 
